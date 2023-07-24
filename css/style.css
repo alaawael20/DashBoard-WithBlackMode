@@ -1,0 +1,217 @@
+/* Start Global Rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:root {
+    --primary_color: #1d2029;
+    --secondery_color: #20222f;
+    --white_color: white;
+    --black_color: black;
+    --card_color: #252b43;
+}
+.dark-mode {
+    --primary_color: #ffffff;
+    --secondery_color: #ffffff;
+    --white_color: black;
+    --black_color: white;
+    --card_color: #c9c9c9;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary_color);
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+}
+/* Start Header */
+header {
+    background-color: var(--secondery_colorr);
+    height: 250px;
+}
+.mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.brand {
+    line-height: 0;
+    cursor: pointer;
+}
+.brand h2 {
+    color: var(--white_color);
+    font-weight: 600;
+}
+.brand p {
+    color: #747d9e;
+    font-size: 15px;
+    font-weight: 600;
+}
+/* Start style button for dark mode */
+.btn button {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--black_color);
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(0,117,255,1) 0%, rgba(18,149,220,1) 28%, rgba(59,224,139,1) 62%, rgba(76,255,106,1) 100%);
+    cursor: pointer;
+}
+/* End style button for dark mode */
+/* End Header */
+/* Start Total Cards  */
+.cards {
+    position: relative;
+    bottom: 130px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+}
+.card {
+    background-color: var(--card_color);
+    margin-top: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 4;
+    border-top: 4px solid #188ff5;
+    border-radius: 5px;
+}
+.username {
+    display: flex;
+    align-items: center;
+}
+.username i {
+    color: #188ff5;
+    font-size: 25px;
+}
+.username span {
+    color: #747d9e;
+    font-size: 13px;
+    margin-left: 10px;
+}
+.followers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+.followers span:first-child {
+    color: var(--white_color);
+    font-size: 40px;
+    font-weight: 600;
+}
+.followers span:last-child {
+    color: #747d9e;
+    font-size: 15px;
+    letter-spacing: 4px;
+}
+.day {
+    color: #10846d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.spicial1 {
+    color: rgb(255, 58, 58);
+}
+/* .spicial2 {
+    color: ;
+} */
+/* End Total Cards  */
+/* Start Overview Today */
+.overview {
+    position: relative;
+    bottom: 110px;
+}
+.overview h2 {
+    color: var(--white_color);
+}
+.overview-today {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+.today-card {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card_color);
+    padding: 15px 30px;
+    line-height: 2;
+    border-radius: 5px;
+}
+.today-card span:nth-child(1) {
+    color: #747d9e;
+    font-size: 15px;
+}
+.today-card span:nth-child(3) {
+    color: var(--white_color);
+    font-size: 30px;
+    font-weight: 600;
+}
+.today-card i:nth-child(2) {
+    color: #188ff5;
+    font-size: 23px;
+}
+.today-card .evaluation {
+    color: #10846d;
+    font-size: 13px;
+    font-weight: 600;
+}
+/* End Overview Today */
+@media (max-width: 992px) {
+    .cards {
+        grid-template-columns: auto auto;
+    }
+    .overview-today {
+        grid-template-columns: auto auto;
+    }
+}
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: auto;
+    }
+    .overview-today {
+        grid-template-columns: auto;
+    }
+}
+@media (max-width: 450px) {
+    .brand {
+        line-height: 0.2;
+    }
+    .brand h2 {
+        font-size: 18px;
+    }
+}
